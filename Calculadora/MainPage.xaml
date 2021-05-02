@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Calculadora"
+             x:Class="Calculadora.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="estiloComum" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="TextColor" Value="black" />
+            </Style>
+            <Style x:Key="botaoClaro" TargetType="Button" BasedOn="{ StaticResource estiloComum }">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+            </Style>
+            <Style x:Key="botaoEscuro" TargetType="Button" BasedOn="{ StaticResource estiloComum }">
+                <Setter Property="BackgroundColor" Value="#ddd"/>
+            </Style>
+            <Style x:Key="botaoLaranja" TargetType="Button" BasedOn="{ StaticResource estiloComum }">
+                <Setter Property="BackgroundColor" Value="#e8ad00"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content >
+        <Grid BackgroundColor="#303030">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                        x:Name="visor"
+                        Text="0"
+                        HorizontalTextAlignment="End"
+                        VerticalTextAlignment="End"
+                        FontSize="60"
+                        
+                        TextColor="White"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Style="{ StaticResource botaoEscuro }" x:Name="zerar" Text="C" Clicked="btnZerar"/>
+            <Button Grid.Row="1" Grid.Column="1" Style="{ StaticResource botaoEscuro }" x:Name="maismenos" Text="+/-" Clicked="btnMaisMenos"/>
+            <Button Grid.Row="1" Grid.Column="2" Style="{ StaticResource botaoEscuro }" x:Name="porcento" Text="%" Clicked="btnPorcento"/>
+            <Button Grid.Row="1" Grid.Column="3" Style="{ StaticResource botaoLaranja }" x:Name="div" Text="div" Clicked="btnDiv"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Style="{ StaticResource botaoEscuro }" x:Name="num7" Text="7" Clicked="btn7"/>
+            <Button Grid.Row="2" Grid.Column="1" Style="{ StaticResource botaoEscuro }" x:Name="num8" Text="8" Clicked="btn8"/>
+            <Button Grid.Row="2" Grid.Column="2" Style="{ StaticResource botaoEscuro }" x:Name="num9" Text="9" Clicked="btn9"/>
+            <Button Grid.Row="2" Grid.Column="3" Style="{ StaticResource botaoLaranja }" x:Name="x" Text="X" Clicked="btnMult"/>
+
+            <Button Grid.Row="3" Grid.Column="0" Style="{ StaticResource botaoEscuro }" x:Name="num4" Text="4" Clicked="btn4"/>
+            <Button Grid.Row="3" Grid.Column="1" Style="{ StaticResource botaoEscuro }" x:Name="num5" Text="5" Clicked="btn5"/>
+            <Button Grid.Row="3" Grid.Column="2" Style="{ StaticResource botaoEscuro }" x:Name="num6" Text="6" Clicked="btn6"/>
+            <Button Grid.Row="3" Grid.Column="3" Style="{ StaticResource botaoLaranja }" x:Name="menos" Text="-" Clicked="btnSub"/>
+
+            <Button Grid.Row="4" Grid.Column="0" Style="{ StaticResource botaoEscuro }" x:Name="num1" Text="1" Clicked="btn1"/>
+            <Button Grid.Row="4" Grid.Column="1" Style="{ StaticResource botaoEscuro }" x:Name="num2" Text="2" Clicked="btn2"/>
+            <Button Grid.Row="4" Grid.Column="2" Style="{ StaticResource botaoEscuro }" x:Name="num3" Text="3" Clicked="btn3"/>
+            <Button Grid.Row="4" Grid.Column="3" Style="{ StaticResource botaoLaranja }" x:Name="mais" Text="+" Clicked="btnSoma"/>
+
+            <Button Grid.Row="5" Grid.Column="0" Style="{ StaticResource botaoEscuro }" x:Name="num0" Text="0" Clicked="btn0"/>
+            <Button Grid.Row="5" Grid.Column="1" Style="{ StaticResource botaoEscuro }" x:Name="ponto" Text="." Clicked="btnPonto"/>
+            <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Style="{ StaticResource botaoLaranja }" x:Name="igual" Text="=" Clicked="btnIgual"/>
+
+        </Grid>
+    </ContentPage.Content>
+
+    
+
+
+
+</ContentPage>
