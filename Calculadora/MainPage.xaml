@@ -21,6 +21,10 @@
                 <Setter Property="BackgroundColor" Value="#e8ad00"/>
                 <Setter Property="TextColor" Value="White"/>
             </Style>
+            <Style x:Key="botaoZerar" TargetType="Button" BasedOn="{ StaticResource estiloComum }">
+                <Setter Property="BackgroundColor" Value="Red"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content >
@@ -51,9 +55,9 @@
                         
                         TextColor="White"/>
 
-            <Button Grid.Row="1" Grid.Column="0" Style="{ StaticResource botaoEscuro }" x:Name="zerar" Text="C" Clicked="btnZerar"/>
-            <Button Grid.Row="1" Grid.Column="1" Style="{ StaticResource botaoEscuro }" x:Name="maismenos" Text="+/-" Clicked="btnMaisMenos"/>
-            <Button Grid.Row="1" Grid.Column="2" Style="{ StaticResource botaoEscuro }" x:Name="porcento" Text="%" Clicked="btnPorcento"/>
+            <Button Grid.Row="1" Grid.Column="0" Style="{ StaticResource botaoZerar }" x:Name="zerar" Text="C" Clicked="btnZerar"/>
+            <Button Grid.Row="1" Grid.Column="1" Style="{ StaticResource botaoLaranja }" x:Name="maismenos" Text="+/-" Clicked="btnMaisMenos"/>
+            <Button Grid.Row="1" Grid.Column="2" Style="{ StaticResource botaoLaranja }" x:Name="porcento" Text="%" Clicked="btnPorcento"/>
             <Button Grid.Row="1" Grid.Column="3" Style="{ StaticResource botaoLaranja }" x:Name="div" Text="div" Clicked="btnDiv"/>
 
             <Button Grid.Row="2" Grid.Column="0" Style="{ StaticResource botaoEscuro }" x:Name="num7" Text="7" Clicked="btn7"/>
